@@ -9,6 +9,8 @@
     .poem { font-style: italic; color: #000000; font-size: 1.15rem; line-height: 1.6; margin-bottom: 70px; }
     .hidden { display: none; }
     input, button { padding: 10px; margin-top: 10px; font-size: 16px; }
+    .menu-buttons { display: flex; justify-content: space-between; gap: 15px; margin-top: 30px; }
+    .menu-buttons button { flex: 1; border-radius: 20px; border: none; cursor: pointer; }
   </style>
 </head>
 <body>
@@ -21,20 +23,26 @@
       Then multiply both to get your first clue.
     </div>
 
-    <h2>Enter the Code</h2>
-    <input type="text" id="code-input" placeholder="Type here">
+    <h2>Enter the Secret Code</h2>
+    <input type="text" id="code-input" placeholder="Enter calculated number">
     <button onclick="verifyCode()">Submit</button>
     <p id="error-msg" style="color: red;"></p>
   </div>
 
   <div id="secret-screen" class="card hidden">
-    <h2>Correct.</h2>
+    <h2>Access Granted! 🎉</h2>
     <p>Your next destination is the library display case.</p>
+
+    <div class="menu-buttons">
+      <button>Scavenger Hunt</button>
+      <button>Trivia</button>
+      <button>TBH</button>
+    </div>
   </div>
 
   <script>
     // Replace with your actual target product (e.g., 106 * 206 = 21836)
-    const SECRET_CODE = "69420"; 
+    const SECRET_CODE = "21836"; 
 
     function verifyCode() {
       const userEntry = document.getElementById("code-input").value.trim();
@@ -44,11 +52,10 @@
         document.getElementById("lock-screen").classList.add("hidden");
         document.getElementById("secret-screen").classList.remove("hidden");
       } else {
-        errorMsg.innerText = "Nope. Try Again.";
+        errorMsg.innerText = "Incorrect code. Check your math and try again!";
       }
     }
   </script>
 
 </body>
 </html>
-```
