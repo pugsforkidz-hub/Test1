@@ -9,8 +9,12 @@
     .poem { font-style: italic; color: #000000; font-size: 1.15rem; line-height: 1.6; margin-bottom: 70px; }
     .hidden { display: none; }
     input, button { padding: 10px; margin-top: 10px; font-size: 16px; }
-    .menu-buttons { display: flex; justify-content: space-around; align-items: center; width: 100%; margin-top: 40px; }
-    .menu-buttons button { width: 30%; padding: 36px 50px; border-radius: 40px; border: none; cursor: pointer; font-size: 24px; }
+    .menu-buttons { display: flex; justify-content: space-between; gap: 35px; margin-top: 40px; }
+    .menu-buttons button { flex: 1; padding: 18px 25px; border-radius: 25px; border: none; cursor: pointer; font-size: 18px; }
+
+    .scavenger-button { background-color: #b7e4c7; }
+    .trivia-button { background-color: #f4b6b6; }
+    .tbh-button { background-color: #f5e6c8; }
   </style>
 </head>
 <body>
@@ -34,9 +38,9 @@
     <p>Your next destination is the library display case.</p>
 
     <div class="menu-buttons">
-      <button>Scavenger Hunt</button>
-      <button>Trivia</button>
-      <button>TBH</button>
+      <button class="scavenger-button">Scavenger Hunt</button>
+      <button class="trivia-button">Trivia</button>
+      <button class="tbh-button">TBH</button>
     </div>
   </div>
 
