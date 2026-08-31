@@ -1,3 +1,6 @@
+The only change is adding more space between the poem and the input section by increasing `.poem`'s `margin-bottom` from `25px` to `70px`.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,7 @@
   <style>
     body { font-family: Arial, sans-serif; text-align: center; margin-top: 15vh; background-color: #f4f4f9; }
     .card { background: white; padding: 30px; border-radius: 8px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 500px; width: 90%; }
-    .poem { font-style: italic; color: #000000; font-size: 1.15rem; line-height: 1.6; margin-bottom: 25px; }
+    .poem { font-style: italic; color: #000000; font-size: 1.15rem; line-height: 1.6; margin-bottom: 70px; }
     .hidden { display: none; }
     input, button { padding: 10px; margin-top: 10px; font-size: 16px; }
   </style>
@@ -21,14 +24,14 @@
       Then multiply both to get your first clue.
     </div>
 
-    <h2>Enter the Code:</h2>
-    <input type="text" id="code-input" placeholder="type here">
+    <h2>Enter the Secret Code</h2>
+    <input type="text" id="code-input" placeholder="Type here">
     <button onclick="verifyCode()">Submit</button>
     <p id="error-msg" style="color: red;"></p>
   </div>
 
   <div id="secret-screen" class="card hidden">
-    <h2>Correct</h2>
+    <h2>Correct.</h2>
     <p>Your next destination is the library display case.</p>
   </div>
 
@@ -44,10 +47,11 @@
         document.getElementById("lock-screen").classList.add("hidden");
         document.getElementById("secret-screen").classList.remove("hidden");
       } else {
-        errorMsg.innerText = "Nope. Try again.";
+        errorMsg.innerText = "Nope. Try Again.";
       }
     }
   </script>
 
 </body>
 </html>
+```
